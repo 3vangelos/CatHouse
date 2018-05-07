@@ -2,7 +2,7 @@ import SnapKit
 import UIKit
 
 
-class CatsCollectionViewCell: UICollectionViewCell {
+class ImageCell: UICollectionViewCell {
     
     var imageView = UIImageView()
     

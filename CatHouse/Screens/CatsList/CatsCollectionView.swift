@@ -17,7 +17,7 @@ class CatsCollectionView: UIView {
         flowLayout.minimumInteritemSpacing = 1
         flowLayout.itemSize = CGSize(width: UIScreen.width/2 - 1, height: UIScreen.width/2)
         collectionView = UICollectionView(frame: CGRect.null, collectionViewLayout: flowLayout)
-        collectionView.register(CatsCollectionViewCell.self, forCellWithReuseIdentifier: cellWithReuseIdentifier)
+        collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellWithReuseIdentifier)
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
         
@@ -35,7 +35,7 @@ class CatsCollectionView: UIView {
 
 extension CatsCollectionView {
     
-    func dequeCellForIndexPath(_ indexPath: IndexPath) -> CatsCollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! CatsCollectionViewCell
+    func dequeCellForIndexPath(_ indexPath: IndexPath) -> ImageCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! ImageCell
     }
 }
