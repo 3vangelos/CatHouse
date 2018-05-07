@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		232A6738702949BCB37C63A9 /* Pods_CatHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE582B3E2D202C25AB664B2A /* Pods_CatHouse.framework */; };
+		F103DE5F20A08F0300F59ED4 /* CatsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */; };
+		F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */; };
 		F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50120A0849D00B49E4A /* AppDelegate.swift */; };
-		F14DE50420A0849D00B49E4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50320A0849D00B49E4A /* ViewController.swift */; };
+		F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */; };
 		F14DE50920A0849D00B49E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14DE50820A0849D00B49E4A /* Assets.xcassets */; };
 		F14DE50C20A0849D00B49E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14DE50A20A0849D00B49E4A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +20,11 @@
 		888BFFF858BF4C65E2E2E27A /* Pods-CatHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatHouse/Pods-CatHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		9B8A0EDBDE30743994592705 /* Pods-CatHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatHouse/Pods-CatHouse.release.xcconfig"; sourceTree = "<group>"; };
 		AE582B3E2D202C25AB664B2A /* Pods_CatHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionView.swift; sourceTree = "<group>"; };
+		F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenHelpers.swift; sourceTree = "<group>"; };
 		F14DE4FE20A0849D00B49E4A /* CatHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14DE50120A0849D00B49E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F14DE50320A0849D00B49E4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
 		F14DE50820A0849D00B49E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F14DE50B20A0849D00B49E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14DE50D20A0849D00B49E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,10 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				F14DE50120A0849D00B49E4A /* AppDelegate.swift */,
-				F14DE50320A0849D00B49E4A /* ViewController.swift */,
 				F14DE50820A0849D00B49E4A /* Assets.xcassets */,
-				F14DE50A20A0849D00B49E4A /* LaunchScreen.storyboard */,
+				F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */,
+				F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */,
 				F14DE50D20A0849D00B49E4A /* Info.plist */,
+				F14DE50A20A0849D00B49E4A /* LaunchScreen.storyboard */,
+				F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */,
 			);
 			path = CatHouse;
 			sourceTree = "<group>";
@@ -197,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14DE50420A0849D00B49E4A /* ViewController.swift in Sources */,
+				F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */,
+				F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */,
 				F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */,
+				F103DE5F20A08F0300F59ED4 /* CatsCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
