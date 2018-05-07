@@ -5,6 +5,10 @@ Tiny iOS app presenting random cat images to the user.
 App loads images from http://thecatapi.com/docs.html and shows them in a CollectionView.
 User is able to like images in order to have them saved persistently in his app.
 
+### HowTo
+
+In order to run the project open CatHouse.xcworkspace.
+
 ### TODOs
 
 Some taks I quickly came up with in order to achieve our goals.
