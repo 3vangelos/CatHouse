@@ -38,4 +38,8 @@ extension CatsCollectionView {
     func dequeCellForIndexPath(_ indexPath: IndexPath) -> ImageCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! ImageCell
     }
+    
+    func reload() {
+        self.collectionView.reloadData()
+    }
 }

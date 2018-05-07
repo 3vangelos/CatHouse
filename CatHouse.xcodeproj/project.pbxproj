@@ -12,6 +12,10 @@
 		F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */; };
 		F103DE6420A0925800F59ED4 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6320A0925800F59ED4 /* Cat.swift */; };
 		F103DE6A20A096F200F59ED4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6920A096F200F59ED4 /* ImageCell.swift */; };
+		F103DE7020A09CB500F59ED4 /* dummy.xml in Resources */ = {isa = PBXBuildFile; fileRef = F103DE6F20A09CB500F59ED4 /* dummy.xml */; };
+		F103DE7220A09DB000F59ED4 /* CatsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7120A09DB000F59ED4 /* CatsCollectionViewModel.swift */; };
+		F103DE7420A0AC3F00F59ED4 /* UIImageViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7320A0AC3F00F59ED4 /* UIImageViewHelpers.swift */; };
+		F103DE7620A0AF5F00F59ED4 /* CatsXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7520A0AF5F00F59ED4 /* CatsXMLParser.swift */; };
 		F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50120A0849D00B49E4A /* AppDelegate.swift */; };
 		F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */; };
 		F14DE50920A0849D00B49E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14DE50820A0849D00B49E4A /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 		F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenHelpers.swift; sourceTree = "<group>"; };
 		F103DE6320A0925800F59ED4 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		F103DE6920A096F200F59ED4 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F103DE6F20A09CB500F59ED4 /* dummy.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dummy.xml; sourceTree = "<group>"; };
+		F103DE7120A09DB000F59ED4 /* CatsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewModel.swift; sourceTree = "<group>"; };
+		F103DE7320A0AC3F00F59ED4 /* UIImageViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewHelpers.swift; sourceTree = "<group>"; };
+		F103DE7520A0AF5F00F59ED4 /* CatsXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsXMLParser.swift; sourceTree = "<group>"; };
 		F14DE4FE20A0849D00B49E4A /* CatHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14DE50120A0849D00B49E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +93,7 @@
 				F14DE50820A0849D00B49E4A /* Assets.xcassets */,
 				F14DE50D20A0849D00B49E4A /* Info.plist */,
 				F14DE50A20A0849D00B49E4A /* LaunchScreen.storyboard */,
+				F103DE6F20A09CB500F59ED4 /* dummy.xml */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -102,6 +111,7 @@
 			children = (
 				F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */,
 				F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */,
+				F103DE7120A09DB000F59ED4 /* CatsCollectionViewModel.swift */,
 			);
 			path = CatsList;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */,
+				F103DE7320A0AC3F00F59ED4 /* UIImageViewHelpers.swift */,
+				F103DE7520A0AF5F00F59ED4 /* CatsXMLParser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14DE50C20A0849D00B49E4A /* LaunchScreen.storyboard in Resources */,
+				F103DE7020A09CB500F59ED4 /* dummy.xml in Resources */,
 				F14DE50920A0849D00B49E4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +272,11 @@
 			files = (
 				F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */,
 				F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */,
+				F103DE7620A0AF5F00F59ED4 /* CatsXMLParser.swift in Sources */,
+				F103DE7420A0AC3F00F59ED4 /* UIImageViewHelpers.swift in Sources */,
 				F103DE6420A0925800F59ED4 /* Cat.swift in Sources */,
 				F103DE6A20A096F200F59ED4 /* ImageCell.swift in Sources */,
+				F103DE7220A09DB000F59ED4 /* CatsCollectionViewModel.swift in Sources */,
 				F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */,
 				F103DE5F20A08F0300F59ED4 /* CatsCollectionView.swift in Sources */,
 			);

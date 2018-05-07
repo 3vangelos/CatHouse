@@ -2,11 +2,20 @@ import UIKit
 
 
 class CatsCollectionViewController: UIViewController {
-    
-    let catsArray = [Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat()]
+
+    private var viewModel = CatsCollectionViewModel()
     
     override func loadView() {
         self.view = CatsCollectionView(delegate: self, dataSource: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard let view = self.view as? CatsCollectionView else { fatalError() }
+
+        viewModel.loadCats() { success in
+            view.reload()
+        }
     }
 }
 
@@ -16,18 +25,17 @@ class CatsCollectionViewController: UIViewController {
 extension CatsCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return catsArray.count
+        return self.viewModel.catsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let view = self.view as? CatsCollectionView else { fatalError() }
         
-        guard indexPath.row < catsArray.count, let image = catsArray[indexPath.row].image else {
-            return UICollectionViewCell()
-        }
-        
         let cell = view.dequeCellForIndexPath(indexPath)
-        cell.imageView.image = image
+        if indexPath.row < self.viewModel.catsArray.count, let url = self.viewModel.catsArray[indexPath.row].url {
+            cell.imageView.downloadedFrom(url: url)
+        }
+
         return cell
     }
 }
