@@ -10,6 +10,8 @@
 		232A6738702949BCB37C63A9 /* Pods_CatHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE582B3E2D202C25AB664B2A /* Pods_CatHouse.framework */; };
 		F103DE5F20A08F0300F59ED4 /* CatsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */; };
 		F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */; };
+		F103DE6420A0925800F59ED4 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6320A0925800F59ED4 /* Cat.swift */; };
+		F103DE6A20A096F200F59ED4 /* CatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE6920A096F200F59ED4 /* CatsCollectionViewCell.swift */; };
 		F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50120A0849D00B49E4A /* AppDelegate.swift */; };
 		F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */; };
 		F14DE50920A0849D00B49E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14DE50820A0849D00B49E4A /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		AE582B3E2D202C25AB664B2A /* Pods_CatHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionView.swift; sourceTree = "<group>"; };
 		F103DE6020A08F5200F59ED4 /* UIScreenHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenHelpers.swift; sourceTree = "<group>"; };
+		F103DE6320A0925800F59ED4 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		F103DE6920A096F200F59ED4 /* CatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F14DE4FE20A0849D00B49E4A /* CatHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14DE50120A0849D00B49E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F103DE6720A096BD00F59ED4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F103DE6920A096F200F59ED4 /* CatsCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F103DE6820A096C300F59ED4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F103DE6320A0925800F59ED4 /* Cat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F14DE4F520A0849D00B49E4A = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,8 @@
 		F14DE50020A0849D00B49E4A /* CatHouse */ = {
 			isa = PBXGroup;
 			children = (
+				F103DE6820A096C300F59ED4 /* Models */,
+				F103DE6720A096BD00F59ED4 /* Views */,
 				F14DE50120A0849D00B49E4A /* AppDelegate.swift */,
 				F14DE50820A0849D00B49E4A /* Assets.xcassets */,
 				F103DE5E20A08F0300F59ED4 /* CatsCollectionView.swift */,
@@ -205,6 +227,8 @@
 			files = (
 				F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */,
 				F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */,
+				F103DE6420A0925800F59ED4 /* Cat.swift in Sources */,
+				F103DE6A20A096F200F59ED4 /* CatsCollectionViewCell.swift in Sources */,
 				F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */,
 				F103DE5F20A08F0300F59ED4 /* CatsCollectionView.swift in Sources */,
 			);

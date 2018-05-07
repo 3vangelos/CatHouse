@@ -3,6 +3,8 @@ import UIKit
 
 class CatsCollectionViewController: UIViewController {
     
+    let catsArray = [Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat(), Cat()]
+    
     override func loadView() {
         self.view = CatsCollectionView(delegate: self, dataSource: self)
     }
@@ -14,15 +16,18 @@ class CatsCollectionViewController: UIViewController {
 extension CatsCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return catsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let view = self.view as? CatsCollectionView else { fatalError() }
         
+        guard indexPath.row < catsArray.count, let image = catsArray[indexPath.row].image else {
+            return UICollectionViewCell()
+        }
+        
         let cell = view.dequeCellForIndexPath(indexPath)
-        cell.backgroundColor = UIColor.brown
-        cell.layoutIfNeeded()
+        cell.imageView.image = image
         return cell
     }
 }

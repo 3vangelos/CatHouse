@@ -17,13 +17,12 @@ class CatsCollectionView: UIView {
         flowLayout.minimumInteritemSpacing = 1
         flowLayout.itemSize = CGSize(width: UIScreen.width/2 - 1, height: UIScreen.width/2)
         collectionView = UICollectionView(frame: CGRect.null, collectionViewLayout: flowLayout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellWithReuseIdentifier)
+        collectionView.register(CatsCollectionViewCell.self, forCellWithReuseIdentifier: cellWithReuseIdentifier)
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
         
         super.init(frame: CGRect.null)
         
-        collectionView.backgroundColor = UIColor.yellow
         self.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(self)
@@ -36,7 +35,7 @@ class CatsCollectionView: UIView {
 
 extension CatsCollectionView {
     
-    func dequeCellForIndexPath(_ indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath)
+    func dequeCellForIndexPath(_ indexPath: IndexPath) -> CatsCollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! CatsCollectionViewCell
     }
 }
