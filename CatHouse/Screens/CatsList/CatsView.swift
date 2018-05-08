@@ -2,7 +2,7 @@ import SnapKit
 import UIKit
 
 
-class CatsCollectionView: UIView {
+class CatsView: UIView {
     
     private let collectionView: UICollectionView
     private let cellWithReuseIdentifier = "CellWithReuseIdentifier"
@@ -34,7 +34,7 @@ class CatsCollectionView: UIView {
 
 // MARK: Public Methods
 
-extension CatsCollectionView {
+extension CatsView {
     
     func dequeCellForIndexPath(_ indexPath: IndexPath) -> ImageCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! ImageCell

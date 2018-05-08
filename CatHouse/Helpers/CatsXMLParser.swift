@@ -35,7 +35,6 @@ extension CatsXMLParser:  XMLParserDelegate {
         if elementName == "image" {
             id = String()
             url = String()
-            sourceUrl = String()
         }
     }
     
@@ -45,7 +44,6 @@ extension CatsXMLParser:  XMLParserDelegate {
             var cat = Cat()
             cat.id = id
             cat.url = url
-            cat.sourceUrl = sourceUrl
             
             catsArray.append(cat)
         }
@@ -59,8 +57,6 @@ extension CatsXMLParser:  XMLParserDelegate {
                 id += data
             } else if eName == "url" {
                 url += data
-            } else if eName == "source_url" {
-                sourceUrl += data
             }
         }
     }

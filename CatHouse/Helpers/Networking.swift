@@ -1,7 +1,7 @@
 import UIKit
 
-extension UIImageView {
-    func downloadedFrom(url: String) {
+struct Networking {
+    static func downloadImageFromUrl(_ url: String, completion:@escaping (UIImage?) -> Void) {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -10,9 +10,13 @@ extension UIImageView {
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, error == nil,
                 let image = UIImage(data: data)
-                else { return }
+                else {
+                    completion(nil)
+                    return
+            }
+            
             DispatchQueue.main.async() {
-                self.image = image
+                completion(image)
             }
             }.resume()
     }

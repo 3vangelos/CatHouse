@@ -10,11 +10,11 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let recentCatsViewController = CatsCollectionViewController()
+        let recentCatsViewController = CatsViewController(.recent)
         recentCatsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: screen.recent.rawValue)
         
         
-        let likedCatsViewController = CatsCollectionViewController()
+        let likedCatsViewController = CatsViewController(.favorites)
         likedCatsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: screen.favorites.rawValue)
         
         viewControllers = [ recentCatsViewController, likedCatsViewController  ]

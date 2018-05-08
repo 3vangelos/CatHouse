@@ -19,6 +19,6 @@ Some taks I quickly came up with in order to achieve our goals.
 - [x] ~~CollectionView showing some dummy images~~
 - [x] ~~Parse Cat Images from XML Stub~~
 - [x] ~~Create TabBar with two screens~~
-- [ ] User can save images locally when tapping a cat image
+- [x] ~~User can save images locally when tapping a cat image~~
 - [ ] Load cats from Backend
 - [ ] Sync Like/Unlike Images from Backend
