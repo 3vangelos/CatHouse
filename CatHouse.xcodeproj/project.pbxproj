@@ -16,6 +16,7 @@
 		F103DE7220A09DB000F59ED4 /* CatsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7120A09DB000F59ED4 /* CatsCollectionViewModel.swift */; };
 		F103DE7420A0AC3F00F59ED4 /* UIImageViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7320A0AC3F00F59ED4 /* UIImageViewHelpers.swift */; };
 		F103DE7620A0AF5F00F59ED4 /* CatsXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103DE7520A0AF5F00F59ED4 /* CatsXMLParser.swift */; };
+		F120361A20A1938A0079DC05 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120361920A1938A0079DC05 /* TabBarController.swift */; };
 		F14DE50220A0849D00B49E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50120A0849D00B49E4A /* AppDelegate.swift */; };
 		F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */; };
 		F14DE50920A0849D00B49E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14DE50820A0849D00B49E4A /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		F103DE7120A09DB000F59ED4 /* CatsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewModel.swift; sourceTree = "<group>"; };
 		F103DE7320A0AC3F00F59ED4 /* UIImageViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewHelpers.swift; sourceTree = "<group>"; };
 		F103DE7520A0AF5F00F59ED4 /* CatsXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsXMLParser.swift; sourceTree = "<group>"; };
+		F120361920A1938A0079DC05 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F14DE4FE20A0849D00B49E4A /* CatHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14DE50120A0849D00B49E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14DE50320A0849D00B49E4A /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				F103DE6B20A09ABD00F59ED4 /* Other */,
 				F103DE6C20A09AE800F59ED4 /* Screens */,
 				F103DE6720A096BD00F59ED4 /* Views */,
+				F120361920A1938A0079DC05 /* TabBarController.swift */,
 			);
 			path = CatHouse;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F14DE50420A0849D00B49E4A /* CatsCollectionViewController.swift in Sources */,
 				F103DE6120A08F5200F59ED4 /* UIScreenHelpers.swift in Sources */,
 				F103DE7620A0AF5F00F59ED4 /* CatsXMLParser.swift in Sources */,
+				F120361A20A1938A0079DC05 /* TabBarController.swift in Sources */,
 				F103DE7420A0AC3F00F59ED4 /* UIImageViewHelpers.swift in Sources */,
 				F103DE6420A0925800F59ED4 /* Cat.swift in Sources */,
 				F103DE6A20A096F200F59ED4 /* ImageCell.swift in Sources */,
