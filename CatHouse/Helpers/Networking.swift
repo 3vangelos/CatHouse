@@ -20,4 +20,17 @@ struct Networking {
             }
             }.resume()
     }
+    
+    static func downloadCats(_ completion:@escaping ([Cat]) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: "http://thecatapi.com/api/images/get?format=xml&results_per_page=100")!) { (data, response, error) -> Void in
+            if let data = data {
+                let parser = CatsXMLParser { cats in
+                    completion(cats)
+                }
+                parser.loadCatsFromData(data)
+            } else {
+                completion([])
+            }
+            }.resume()
+    }
 }

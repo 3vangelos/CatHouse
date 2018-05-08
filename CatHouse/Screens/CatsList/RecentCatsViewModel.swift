@@ -6,11 +6,10 @@ class RecentCatsViewModel: CatsViewModelProtocol {
     private var catsArray = [Cat]()
     
     func loadCats(_ completion:@escaping (Bool) -> Void) {
-        let parser = CatsXMLParser { cats in
+        Networking.downloadCats { cats in
             self.catsArray = cats
             completion(true)
         }
-        parser.loadCats()
     }
     
     func loadCatImageForIndex(_ index: Int, completion: @escaping (UIImage?) -> Void) {

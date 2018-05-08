@@ -14,14 +14,17 @@ class CatsXMLParser: NSObject {
         self.data = data
     }
     
-    func loadCats() {
+    func loadCatsFromData(_ data: Data) {
+        let parser = XMLParser(data: data)
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    func loadDummyCats() {
         if let path = Bundle.main.path(forResource: "dummy", ofType: "xml") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let parser = XMLParser(data: data)
-                parser.delegate = self
-                parser.parse()
-                
+                loadCatsFromData(data)
             } catch {
                 fatalError()
             }

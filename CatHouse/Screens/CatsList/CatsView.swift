@@ -41,6 +41,8 @@ extension CatsView {
     }
     
     func reload() {
-        self.collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }

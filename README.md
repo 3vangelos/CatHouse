@@ -20,5 +20,8 @@ Some taks I quickly came up with in order to achieve our goals.
 - [x] ~~Parse Cat Images from XML Stub~~
 - [x] ~~Create TabBar with two screens~~
 - [x] ~~User can save images locally when tapping a cat image~~
-- [ ] Load cats from Backend
+- [x] ~~Load cats from Backend~~
+- [x] Improve User Feedback for liking
 - [ ] Sync Like/Unlike Images from Backend
+- [ ] Include Error Handling
+- [ ] Unit Test File Handling Methods

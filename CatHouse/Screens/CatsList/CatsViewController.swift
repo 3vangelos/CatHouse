@@ -46,8 +46,11 @@ extension CatsViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let view = self.view as? CatsView else { fatalError() }
         
         let cell = view.dequeCellForIndexPath(indexPath)
+        cell.activitIndicator.startAnimating()
         self.viewModel.loadCatImageForIndex(indexPath.row, completion: { image in
             cell.imageView.image = image
+            cell.activitIndicator.stopAnimating()
+            cell.activitIndicator.isHidden = true
             cell.layoutIfNeeded()
         })
 
