@@ -11,16 +11,17 @@ class CatsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(delegate: UICollectionViewDelegate?, dataSource: UICollectionViewDataSource?) {
+    init(delegate: UICollectionViewDelegate & UICollectionViewDataSource) {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 1
         flowLayout.minimumInteritemSpacing = 1
         flowLayout.itemSize = CGSize(width: UIScreen.width/2 - 1, height: UIScreen.width/2)
         collectionView = UICollectionView(frame: CGRect.null, collectionViewLayout: flowLayout)
+        collectionView.refreshControl = UIRefreshControl()
         collectionView.backgroundColor = UIColor.white
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellWithReuseIdentifier)
         collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
+        collectionView.dataSource = delegate
         
         super.init(frame: CGRect.null)
         
@@ -38,6 +39,16 @@ extension CatsView {
     
     func dequeCellForIndexPath(_ indexPath: IndexPath) -> ImageCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellWithReuseIdentifier, for: indexPath) as! ImageCell
+    }
+    
+    func addTarget(_ target: UIViewController, selector: Selector) {
+        collectionView.refreshControl?.addTarget(target, action: selector, for: .valueChanged)
+    }
+    
+    func finishAnimations() {
+        DispatchQueue.main.async {
+            self.collectionView.refreshControl?.endRefreshing()
+        }
     }
     
     func reload() {

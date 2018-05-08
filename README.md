@@ -21,7 +21,7 @@ Some taks I quickly came up with in order to achieve our goals.
 - [x] ~~Create TabBar with two screens~~
 - [x] ~~User can save images locally when tapping a cat image~~
 - [x] ~~Load cats from Backend~~
-- [x] Improve User Feedback for liking
+- [x] ~~Improve User Feedback for liking~~
 - [ ] Sync Like/Unlike Images from Backend
 - [ ] Include Error Handling
 - [ ] Unit Test File Handling Methods

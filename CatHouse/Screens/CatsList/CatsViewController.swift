@@ -1,8 +1,10 @@
+import PKHUD
 import UIKit
 
 
 class CatsViewController: UIViewController {
 
+    private var catsView: CatsView!
     private let viewModel: CatsViewModelProtocol
     
     init(_ type: TabBarController.screen) {
@@ -16,20 +18,36 @@ class CatsViewController: UIViewController {
     }
     
     override func loadView() {
-        self.view = CatsView(delegate: self, dataSource: self)
+        catsView = CatsView(delegate: self)
+        self.view = catsView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if self.viewModel is RecentCatsViewModel {
+            catsView.addTarget(self, selector: #selector(refresh))
+            loadCats()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadCats()
+        if self.viewModel is LikedCatsViewModel {
+            loadCats()
+        }
     }
     
     func loadCats() {
-        guard let view = self.view as? CatsView else { fatalError() }
         
         viewModel.loadCats() { success in
-            view.reload()
+            self.catsView.reload()
+            self.catsView.finishAnimations()
         }
+    }
+    
+    @objc func refresh() {
+        loadCats()
     }
 }
 
@@ -43,9 +61,8 @@ extension CatsViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let view = self.view as? CatsView else { fatalError() }
         
-        let cell = view.dequeCellForIndexPath(indexPath)
+        let cell = catsView.dequeCellForIndexPath(indexPath)
         cell.activitIndicator.startAnimating()
         self.viewModel.loadCatImageForIndex(indexPath.row, completion: { image in
             cell.imageView.image = image
@@ -60,7 +77,8 @@ extension CatsViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let image = (collectionView.cellForItem(at: indexPath) as? ImageCell)?.imageView.image {
             
-            self.viewModel.didTapOnImage(image, index: indexPath.row, completion: { _ in
+            self.viewModel.didTapOnImage(image, index: indexPath.row, completion: { success in
+                HUD.flash(success ? .success : .error)
                 if self.viewModel is LikedCatsViewModel {
                     self.loadCats()
                 }
